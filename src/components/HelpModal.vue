@@ -4,6 +4,7 @@
     preset="card"
     size="medium"
     title="ヘルプ"
+    style="max-width: 720px"
   >
     <div class="card">
       <h3>これはなに？</h3>
