@@ -23,7 +23,7 @@
 </script>
 <template>
   <NSpace justify="space-around">
-    <div class="pain">
+    <div class="pane">
       <h2>RGB</h2>
       <NSpace justify="space-between">
         <p>R</p>
@@ -38,7 +38,7 @@
         <p>{{rgb.b}}</p>
       </NSpace>
     </div>
-    <div class="pain">
+    <div class="pane">
       <h2>A列車</h2>
       <NSpace justify="space-between">
         <p>色相</p>
@@ -67,7 +67,7 @@ p {
 .value {
   font-weight: bold;
 }
-.pain {
+.pane {
   width: 10em;
 }
 </style>
