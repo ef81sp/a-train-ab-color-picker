@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import { NColorPicker } from 'naive-ui'
 import ColorPickerLabel from './ColorPickerLabel.vue'
 import Color from 'color'
-import ColorButtons from './ColorButtons.vue'
+import ColorButtons from './ColorPickerColorButtons.vue'
 
 const colorRgb = ref(Color('rgb(0, 141, 121)'))
 const updateColor = (value: Color) => {
