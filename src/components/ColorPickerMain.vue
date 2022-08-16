@@ -1,29 +1,23 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import { NColorPicker } from 'naive-ui'
 import ColorPickerLabel from './ColorPickerLabel.vue'
-import Color from 'color'
 import ColorButtons from './ColorPickerColorButtons.vue'
+import { useColorPickerStore } from '../store/colorPickerStore'
 
-const colorRgb = ref(Color('rgb(0, 141, 121)'))
-const updateColor = (value: Color) => {
-  colorRgb.value = Color(value)
-}
+const colorPickerStore = useColorPickerStore()
 </script>
 
 <template>
-  <!-- {{colorRgb}} -->
-  <!-- {{colorHsv}} -->
-  <ColorPickerLabel :color="colorRgb" />
+  <ColorPickerLabel :color="colorPickerStore.color" />
   <NColorPicker
-    :value="colorRgb.toString()"
+    :value="colorPickerStore.colorString"
     placement="bottom"
     :modes="['rgb']"
-    :on-update:value="updateColor"
+    :on-update:value="colorPickerStore.updateColor"
     :render-label="() => 'クリックでカラーピッカー表示'"
     :show-alpha="false"
   />
-  <ColorButtons :update-color="updateColor" />
+  <ColorButtons :update-color="colorPickerStore.updateColor" />
 </template>
 
 <style scoped>
