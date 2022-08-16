@@ -2,7 +2,7 @@
 import { NColorPicker } from 'naive-ui'
 import ColorPickerLabel from './ColorPickerLabel.vue'
 import ColorButtons from './ColorPickerColorButtons.vue'
-import { useColorPickerStore } from '../store/colorPickerStore'
+import { useColorPickerStore } from '~/store/colorPickerStore'
 
 const colorPickerStore = useColorPickerStore()
 </script>

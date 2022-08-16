@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import ColorPickerMain from './components/ColorPickerMain.vue'
+import ColorPickerMain from '@/ColorPicker/ColorPickerMain.vue'
 
 export const router = createRouter({
   routes: [{ path: '/', name: 'color-picker', component: ColorPickerMain }],

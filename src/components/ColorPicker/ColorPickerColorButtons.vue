@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Color from 'color'
 import { NSpace, NButton, NTabs, NTabPane } from 'naive-ui'
-import { colorList } from '../colorList'
+import { colorList } from '~/colorList'
 defineProps<{
   updateColor: (value: Color) => void
 }>()

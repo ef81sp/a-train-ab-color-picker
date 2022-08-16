@@ -2,7 +2,7 @@
 import { computed, ref } from 'vue'
 import { NConfigProvider, darkTheme, NGlobalStyle, NPageHeader, NSwitch, NIcon, NButton, NSpace } from 'naive-ui'
 import { WeatherSunny24Regular, WeatherMoon24Regular, Question24Regular } from '@vicons/fluent'
-import HelpModal from './components/ColorPickerHelpModal.vue'
+import HelpModal from '@/ColorPicker/ColorPickerHelpModal.vue'
 
 const themeSwitchValue = ref(false)
 const theme = computed(() => (themeSwitchValue.value ? darkTheme : null))
