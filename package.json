@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "eslint:fix": "eslint --fix .",
+    "prettier:fix": "prettier --write . --ignore-path ./.eslintignore",
+    "formatall": "npm run eslint:fix && npm run prettier:fix"
   },
   "dependencies": {
     "vue": "^3.2.37"

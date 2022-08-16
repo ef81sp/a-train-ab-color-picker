@@ -8,7 +8,9 @@
   >
     <div class="card">
       <h3>これはなに？</h3>
-      <p>『A列車で行こう はじまる観光計画』の「列車開発機能」で使う色の設定値を、RGBから簡単に取得するためのツールです。</p>
+      <p>
+        『A列車で行こう はじまる観光計画』の「列車開発機能」で使う色の設定値を、RGBから簡単に取得するためのツールです。
+      </p>
       <h3>どうやって使うの？</h3>
       <ul>
         <li>画面下部のボタンを押してください。その色の設定値が表示されます。</li>
@@ -19,15 +21,21 @@
       <p>画面の何もないところをクリック/タップしてください。</p>
       <h3>色強度は？</h3>
       <p>
-        ご自身でいい感じに調整してください。（よくわかりませんでした。ごめんなさい。）<br/>
+        ご自身でいい感じに調整してください。（よくわかりませんでした。ごめんなさい。）<br />
         だいたい150%前後で調整するといい感じです。
       </p>
       <h3>謝辞</h3>
-      <p>プリセットの色は <a
-        href="https://www.colordic.org/"
-        target="_blank"
-        rel="noreferrer"
-      >原色大辞典</a> 様の公開されているRGB値をベースとして使わせていただきました。<br/>一部、ゲーム画面でしっくりくるよう調整しています。</p>
+      <p>
+        プリセットの色は
+        <a
+          href="https://www.colordic.org/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          原色大辞典
+        </a>
+        様の公開されているRGB値をベースとして使わせていただきました。<br />一部、ゲーム画面でしっくりくるよう調整しています。
+      </p>
       <h3>参考図書</h3>
       <p>実際の車両がどの色の組み合わせで塗装されているか紹介されていてオススメです。</p>
       <ul>
@@ -60,31 +68,37 @@
         </li>
       </ul>
       <h3>このツールを作った人</h3>
-      rik<br/>
-      Twitter: <a
+      rik<br />
+      Twitter:
+      <a
         href="https://twitter.com/rik31415926"
         tarteg="_blank"
         rel="noreferrer"
-      >@rik31415926</a><br/>
-      Website: <a
+        >@rik31415926</a
+      ><br />
+      Website:
+      <a
         href="https://rik.ninja"
         tarteg="_blank"
         rel="noreferrer"
-      >rik</a>
+        >rik</a
+      >
     </div>
   </NModal>
 </template>
 <script setup lang="ts">
-  import { NModal } from "naive-ui"
-  import {computed} from "vue"
-  const props = defineProps<{ show: boolean }>()
-  const emit = defineEmits<{
-    (e: 'update:show', value: boolean): void
-  }>()
-  const _show = computed({
-    get: () => props.show,
-    set: (value: boolean) => {emit("update:show", value)}
-  })
+import { NModal } from 'naive-ui'
+import { computed } from 'vue'
+const props = defineProps<{ show: boolean }>()
+const emit = defineEmits<{
+  (e: 'update:show', value: boolean): void
+}>()
+const _show = computed({
+  get: () => props.show,
+  set: (value: boolean) => {
+    emit('update:show', value)
+  },
+})
 </script>
 <style scoped>
 .card {

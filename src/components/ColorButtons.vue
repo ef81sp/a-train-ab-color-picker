@@ -1,10 +1,10 @@
 <script setup lang="ts">
-  import Color from "color";
-  import { NSpace, NButton, NTabs, NTabPane } from "naive-ui"
-  import {colorList} from "../colorList";
-  defineProps<{
-    updateColor: (value: Color) => void;
-  }>()
+import Color from 'color'
+import { NSpace, NButton, NTabs, NTabPane } from 'naive-ui'
+import { colorList } from '../colorList'
+defineProps<{
+  updateColor: (value: Color) => void
+}>()
 </script>
 <template>
   <NTabs
@@ -24,11 +24,11 @@
           v-for="color in colorGroup.colors"
           :key="color.name"
           :color="color.value.toString()"
-          v-on:click="()=>updateColor(color.value)"
           size="tiny"
-          :text-color="color.value.isLight() ? '#262626' :'#e6e6e6'"
+          :text-color="color.value.isLight() ? '#262626' : '#e6e6e6'"
+          @click="() => updateColor(color.value)"
         >
-          {{color.name}}
+          {{ color.name }}
         </NButton>
       </NSpace>
     </NTabPane>
