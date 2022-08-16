@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import Main from './components/ColorPickerMain.vue'
 import { NConfigProvider, darkTheme, NGlobalStyle, NPageHeader, NSwitch, NIcon, NButton, NSpace } from 'naive-ui'
 import { WeatherSunny24Regular, WeatherMoon24Regular, Question24Regular } from '@vicons/fluent'
 import HelpModal from './components/ColorPickerHelpModal.vue'
@@ -46,6 +45,6 @@ const showModal = ref(false)
       </template>
     </NPageHeader>
 
-    <Main />
+    <RouterView />
   </NConfigProvider>
 </template>
